@@ -1,16 +1,14 @@
-require('dotenv').config();
-const mongoose = require('mongoose');
-var express = require('express');
+const express = require("express");
+const connDB = require("./config/mongodb");
+const routerPessoa = require("./routes/routerPessoa");
 
-const routerPessoa = require('./routes/routerPessoa');
+const app = express();
 
-var app = express();
-
-mongoose.connect(process.env.MONGODB_URL);
+connDB();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/pessoa', routerPessoa);
+app.use("/pessoa", routerPessoa);
 
 module.exports = app;
