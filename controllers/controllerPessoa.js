@@ -6,4 +6,9 @@ async function criar(req, res) {
   res.status(201).json(pessoa);
 }
 
-module.exports = { criar };
+async function listarPessoas(req, res) {
+  const pessoas = await Pessoa.find({});
+  res.json(pessoas);
+}
+
+module.exports = { criar, listarPessoas };
