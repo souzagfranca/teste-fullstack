@@ -1,9 +1,17 @@
 const mongoose = require("mongoose");
 
 const pessoaSchema = new mongoose.Schema({
-  nome: { type: String, trim: true, required: true },
+  fantasia: { type: String, trim: true, required: true },
+  razaosocial: { type: String, trim: true, required: true },
+  cpfcnpj: { type: String, trim: true, required: true },
+  endereco: { type: String, trim: true },
   cidade: { type: String, trim: true, required: true },
+  bairro: { type: String, trim: true },
   uf: { type: String, trim: true, required: true },
+  cep: { type: Number, trim: true },
+  contato: { type: String, trim: true },
+  telefone: { type: Number, trim: true },
+  telefone: { type: String, trim: true },
   status: { type: Boolean },
 });
 

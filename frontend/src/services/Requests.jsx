@@ -7,7 +7,7 @@ async function listaPessoa() {
   } catch (error) {
     console.error("Erro ao buscar pessoas:", error);
   } finally {
-    console.log("AQUIII");
+    console.log("Sucesso!");
   }
 }
 
